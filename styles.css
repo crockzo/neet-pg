@@ -25,9 +25,37 @@ body {
 }
 
 .app-header {
+  position: relative;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 20px 24px;
+}
+
+.built-with {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
+.built-with a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.built-with a:hover {
+  text-decoration: underline;
+}
+
+.built-with strong {
+  color: var(--primary);
 }
 
 .app-header h1 {
@@ -444,4 +472,15 @@ td.col-rank {
 
 .btn:disabled:hover {
   background: var(--surface);
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding-top: 56px;
+  }
+
+  .built-with {
+    top: 12px;
+    right: 12px;
+  }
 }
