@@ -327,6 +327,22 @@ main {
   font-size: 13px;
 }
 
+/* ---------- Filter hint ---------- */
+.filter-hint {
+  margin: -8px 0 16px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+}
+
+.filter-hint strong {
+  color: var(--primary-hover);
+}
+
 /* ---------- Results info ---------- */
 .results-info {
   margin-bottom: 12px;
