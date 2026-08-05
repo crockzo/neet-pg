@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEET PG 2025 Allotment Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>NEET PG Allotment Viewer</h1>
+    <p class="subtitle">Browse the NMC seat allotment data with filters.</p>
+  </header>
+
+  <main>
+    <section class="filter-bar">
+      <div class="filter-control" id="filter-quota"></div>
+      <div class="filter-control" id="filter-course"></div>
+      <div class="filter-control" id="filter-allotted"></div>
+      <div class="filter-control" id="filter-candidate"></div>
+      <div class="filter-control filter-institute" id="filter-institute"></div>
+      <div class="filter-actions">
+        <button id="apply-btn" class="btn btn-primary">Apply Filter</button>
+        <button id="clear-btn" class="btn">Clear All</button>
+      </div>
+    </section>
+
+    <section class="results-info">
+      <span id="result-count" class="result-count"></span>
+    </section>
+
+    <section class="table-wrap">
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th data-key="sno">SNo</th>
+            <th data-key="rank">Rank</th>
+            <th data-key="quota">Allotted Quota</th>
+            <th data-key="institute">Allotted Institute</th>
+            <th data-key="course">Course</th>
+            <th data-key="allottedCategory">Allotted Category</th>
+            <th data-key="candidateCategory">Candidate Category</th>
+            <th data-key="remarks">Remarks</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr><td colspan="8" class="empty-cell">Loading…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="pagination">
+      <button id="prev-btn" class="btn">Previous</button>
+      <span id="page-info" class="page-info"></span>
+      <button id="next-btn" class="btn">Next</button>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
