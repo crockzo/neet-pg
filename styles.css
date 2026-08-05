@@ -41,6 +41,20 @@ body {
   margin-top: 4px;
 }
 
+.app-header .source-note {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.app-header .source-note a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.app-header .source-note a:hover {
+  text-decoration: underline;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
