@@ -61,7 +61,7 @@ The allotment data is from the **NEET PG 2025** results — specifically **MCC A
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by the Medical Counselling Committee (MCC), the National Medical Commission (NMC), or Reddit. It is a personal tool for exploring publicly shared allotment data.
+This project is not affiliated with or endorsed by the Medical Counselling Committee (MCC), the National Medical Commission (NMC), or Reddit. It is a personal tool for exploring publicly shared allotment data
 
 ## License
 
