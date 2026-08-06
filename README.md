@@ -1,6 +1,6 @@
 # NEET PG Allotment Viewer
 
-A fast, browser-based viewer for the **NEET PG 2025** (MCC All India Counseling, Round 1) seat allotment results. Load the entire allotment dataset and filter, search, and sort your way through 26,889 allotments — no server required.
+A fast, browser-based viewer for the **NEET PG 2025** (MCC All India Counseling, Round 1) seat allotment results. Load the entire allotment dataset and filter, search, and sort your way through ~66,000 allotments — no server required.
 
 Built with plain HTML, CSS, and JavaScript. No frameworks, no dependencies, no build step.
 
@@ -10,7 +10,7 @@ Built with plain HTML, CSS, and JavaScript. No frameworks, no dependencies, no b
 
 ## What it does
 
-- **View** all 26,889 allotment rows (2025, MCC All India Counseling Round 1) in a paginated table (100 rows per page).
+- **View** allotment rows for Round 1 (26,889), Round 2 (20,787) or Round 3 (18,673) — switch datasets with the round selector, 100 rows per page.
 - **Filter** by four columns simultaneously:
   - Allotted Quota
   - Course
@@ -32,7 +32,7 @@ Filters are applied only when you click **Apply Filter**, so you can build up a 
 | `script.js`      | Round switching, filtering, autocomplete, sorting, pagination logic  |
 | `round-1/data.js`| Round 1 allotment data as a bundled JS file (generated, ~8 MB)       |
 | `round-2/data.js`| Round 2 allotment data as a bundled JS file (generated, ~6.5 MB)     |
-| `convert_xlsx.py`| Rebuilds a round's `data.js` from its `neet-pg-document.xlsx` (Python stdlib only) |
+| `round-3/data.js`| Round 3 allotment data as a bundled JS file (generated, ~6.4 MB)     |
 | `.nojekyll`      | Tells GitHub Pages to serve the files as-is                          |
 
 ## Running locally
@@ -45,22 +45,17 @@ open index.html
 
 No local server needed — the data is bundled into `data.js` and everything works from `file://`.
 
-## Regenerating the data
-
-If you have an updated copy of the spreadsheet named `neet-pg-document.xlsx` in the `round-1/` or `round-2/` folder:
-
-```bash
-python3 convert_xlsx.py --round 1
-python3 convert_xlsx.py --round 2
-```
-
-This rewrites the matching `round-N/data.js` from that round's spreadsheet. Requires Python 3 with no extra packages.
-
 ## Data source & credits
 
 The allotment data is from the **NEET PG 2025** results — specifically **MCC All India Counseling, Round 1**. It was obtained from the following Reddit post in r/indianmedschool:
 
-- [MCC All India Counseling Round 1 2025 Excel](https://www.reddit.com/r/indianmedschool/comments/1p2zhoa/mcc_all_india_counseling_round_1_2025_excel/)
+- [Inspired by this reddit post](https://www.reddit.com/r/indianmedschool/comments/1p2zhoa/mcc_all_india_counseling_round_1_2025_excel/)
+
+- [Round 1 data source](https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2025/11/202511221303622410.pdf)
+
+- [Round 2 data source](https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2025/12/202512172132273940.pdf)
+
+- [Round 3 data source](https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/02/20260206892439077.pdf)
 
 > **Note:** This is an unofficial, community-shared copy of the data, provided for reference only. Always verify the latest information against the official [Medical Counselling Committee (MCC)](https://mcc.nic.in/) website.
 

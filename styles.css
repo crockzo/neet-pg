@@ -31,10 +31,29 @@ body {
   padding: 20px 24px;
 }
 
-.built-with {
+.header-right {
   position: absolute;
   top: 16px;
   right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.coffee-btn {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.coffee-btn .coffee-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.built-with {
   font-size: 12px;
   font-weight: 500;
   color: var(--muted);
@@ -554,10 +573,10 @@ td.col-rank {
 
 @media (max-width: 640px) {
   .app-header {
-    padding-top: 56px;
+    padding-top: 104px;
   }
 
-  .built-with {
+  .header-right {
     top: 12px;
     right: 12px;
   }
