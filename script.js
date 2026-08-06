@@ -12,8 +12,9 @@ const filterState = {
 };
 
 const COLUMN_META = {
-  sno: { label: "SNo", numeric: true },
+  // sno: { label: "SNo", numeric: true }, // SNo column removed from UI; data still contains the field.
   rank: { label: "Rank", numeric: true },
+  score: { label: "Score", numeric: true },
   quota: { label: "Allotted Quota", numeric: false },
   institute: { label: "Allotted Institute", numeric: false },
   course: { label: "Course", numeric: false },
@@ -299,10 +300,12 @@ function render() {
   } else {
     for (const row of slice) {
       const tr = document.createElement("tr");
-      for (const key of ["sno", "rank", "quota", "institute", "course", "allottedCategory", "candidateCategory", "remarks"]) {
+      // "sno" intentionally omitted — SNo column removed from UI.
+      for (const key of ["rank", "score", "quota", "institute", "course", "allottedCategory", "candidateCategory", "remarks"]) {
         const td = document.createElement("td");
         td.textContent = row[key];
         if (key === "rank") td.className = "col-rank";
+        if (key === "score") td.className = "col-score";
         if (key === "institute" || key === "course") td.title = row[key];
         tr.appendChild(td);
       }
