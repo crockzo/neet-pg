@@ -27,11 +27,12 @@ Filters are applied only when you click **Apply Filter**, so you can build up a 
 
 | File             | Purpose                                                              |
 | ---------------- | -------------------------------------------------------------------- |
-| `index.html`     | Page markup                                                          |
+| `index.html`     | Page markup (incl. round selector)                                   |
 | `styles.css`     | Light theme styling                                                  |
-| `script.js`      | Filtering, autocomplete, sorting, and pagination logic               |
-| `data.js`        | The allotment data as a bundled JS file (generated, ~7.8 MB)         |
-| `convert_xlsx.py`| Rebuilds `data.js` from `neet-pg-document.xlsx` (Python stdlib only) |
+| `script.js`      | Round switching, filtering, autocomplete, sorting, pagination logic  |
+| `round-1/data.js`| Round 1 allotment data as a bundled JS file (generated, ~8 MB)       |
+| `round-2/data.js`| Round 2 allotment data as a bundled JS file (generated, ~6.5 MB)     |
+| `convert_xlsx.py`| Rebuilds a round's `data.js` from its `neet-pg-document.xlsx` (Python stdlib only) |
 | `.nojekyll`      | Tells GitHub Pages to serve the files as-is                          |
 
 ## Running locally
@@ -46,13 +47,14 @@ No local server needed — the data is bundled into `data.js` and everything wor
 
 ## Regenerating the data
 
-If you have an updated copy of the spreadsheet named `neet-pg-document.xlsx` in this directory:
+If you have an updated copy of the spreadsheet named `neet-pg-document.xlsx` in the `round-1/` or `round-2/` folder:
 
 ```bash
-python3 convert_xlsx.py
+python3 convert_xlsx.py --round 1
+python3 convert_xlsx.py --round 2
 ```
 
-This rewrites `data.js` from the spreadsheet. Requires Python 3 with no extra packages.
+This rewrites the matching `round-N/data.js` from that round's spreadsheet. Requires Python 3 with no extra packages.
 
 ## Data source & credits
 

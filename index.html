@@ -19,6 +19,28 @@
          target="_blank" rel="noopener noreferrer">this Reddit post</a>
       — unofficial, for reference only.
     </p>
+
+    <fieldset class="round-selector">
+      <legend>Allotment Round</legend>
+      <div class="round-options">
+        <label class="round-option">
+          <input type="radio" name="round" value="Round 1" checked>
+          <span>Round 1</span>
+        </label>
+        <label class="round-option">
+          <input type="radio" name="round" value="Round 2">
+          <span>Round 2</span>
+        </label>
+        <label class="round-option">
+          <input type="radio" name="round" value="Round 3">
+          <span>Round 3</span>
+        </label>
+      </div>
+      <p class="round-desc">
+        Choose which round's seat allotment data you want to view.
+        Selecting a round switches the dataset and resets any applied filters.
+      </p>
+    </fieldset>
   </header>
 
   <main>
@@ -70,7 +92,9 @@
     </section>
   </main>
 
-  <script src="data.js"></script>
+  <script src="./round-1/data.js"></script>
+  <script src="./round-2/data.js"></script>
+  <script src="./round-3/data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 const PAGE_SIZE = 100;
-const data = ALLOTMENT_DATA;
+let data = ROUND_1_DATA;
+const DATA_BY_ROUND = { "Round 1": ROUND_1_DATA, "Round 2": ROUND_2_DATA, "Round 3": ROUND_3_DATA };
+let currentRound = "Round 1";
 
 const filterState = {
   quota: "",
@@ -337,7 +339,13 @@ function clearAll() {
 
 /* ---------- Wire up ---------- */
 
-function init() {
+function buildFilters() {
+  document.getElementById("filter-quota").innerHTML = "";
+  document.getElementById("filter-course").innerHTML = "";
+  document.getElementById("filter-allotted").innerHTML = "";
+  document.getElementById("filter-candidate").innerHTML = "";
+  document.getElementById("filter-institute").innerHTML = "";
+
   for (const field of FILTER_FIELDS) {
     const container = document.getElementById("filter-" + {
       quota: "quota",
@@ -349,9 +357,28 @@ function init() {
   }
 
   createInstituteAutocomplete(document.getElementById("filter-institute"));
+}
+
+function switchRound(round) {
+  if (round === currentRound) return;
+  currentRound = round;
+  data = DATA_BY_ROUND[round];
+  for (const key of Object.keys(filterState)) filterState[key] = "";
+  page = 1;
+  sortKey = "rank";
+  sortDir = "asc";
+  buildFilters();
+  applyFilters();
+}
+
+function init() {
+  buildFilters();
 
   document.getElementById("apply-btn").addEventListener("click", applyFilters);
   document.getElementById("clear-btn").addEventListener("click", clearAll);
+  document.querySelectorAll('input[name="round"]').forEach((radio) => {
+    radio.addEventListener("change", () => switchRound(radio.value));
+  });
   document.getElementById("prev-btn").addEventListener("click", () => {
     page = Math.max(1, page - 1);
     render();

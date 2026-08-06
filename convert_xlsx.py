@@ -1,3 +1,4 @@
+import argparse
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -16,6 +17,11 @@ KEY_BY_COL = {
     "G": "candidateCategory",
     "H": "remarks",
 }
+
+ROUND = 3
+XLSX = "neet-pg-document.xlsx"
+OUT = "data.js"
+VAR = "ALLOTMENT_DATA"
 
 
 def load_shared_strings():
@@ -63,6 +69,19 @@ def load_rows():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Rebuild a round's data.js from its neet-pg-document.xlsx"
+    )
+    parser.add_argument(
+        "--round", type=int, default=2, choices=[1, 2],
+        help="Counseling round number (writes round-N/data.js with ROUND_N_DATA)",
+    )
+    args = parser.parse_args()
+    ROUND = args.round
+    XLSX = f"round-{ROUND}/neet-pg-document.xlsx"
+    OUT = f"round-{ROUND}/data.js"
+    VAR = f"ROUND_{ROUND}_DATA"
+
     print("Reading shared strings...")
     shared_strings = load_shared_strings()
     print(f"  {len(shared_strings)} strings loaded")
@@ -78,7 +97,7 @@ if __name__ == "__main__":
 
     print(f"Writing {OUT}...")
     with open(OUT, "w", encoding="utf-8") as f:
-        f.write("const ALLOTMENT_DATA = ")
+        f.write(f"const {VAR} = ")
         json.dump(rows, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
 

@@ -83,6 +83,84 @@ body {
   text-decoration: underline;
 }
 
+/* ---------- Round selector ---------- */
+.round-selector {
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.round-selector legend {
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.round-options {
+  display: flex;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.round-option {
+  position: relative;
+}
+
+.round-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.round-option span {
+  display: inline-block;
+  padding: 7px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.round-option:hover span {
+  background: var(--header-bg);
+}
+
+.round-option input:checked + span {
+  background: var(--primary);
+  color: #fff;
+}
+
+.round-option input:checked:hover span {
+  background: var(--primary-hover);
+}
+
+.round-option input:focus-visible + span {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
+.round-desc {
+  font-size: 13px;
+  color: var(--muted);
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
 main {
   max-width: 1400px;
   margin: 0 auto;
