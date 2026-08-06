@@ -1,7 +1,38 @@
 const PAGE_SIZE = 100;
-let data = ROUND_1_DATA;
-const DATA_BY_ROUND = { "Round 1": ROUND_1_DATA, "Round 2": ROUND_2_DATA, "Round 3": ROUND_3_DATA };
-let currentRound = "Round 1";
+
+function decodeRound(dict, rows) {
+  const q = dict.quota, inst = dict.institute, c = dict.course,
+        a = dict.allottedCategory, cc = dict.candidateCategory, r = dict.remarks;
+  const out = new Array(rows.length);
+  for (let k = 0; k < rows.length; k++) {
+    const row = rows[k];
+    out[k] = {
+      sno: row[0], rank: row[1], quota: q[row[2]], institute: inst[row[3]],
+      course: c[row[4]], allottedCategory: a[row[5]],
+      candidateCategory: cc[row[6]], remarks: r[row[7]],
+    };
+  }
+  return out;
+}
+
+const ROUND_META = {
+  "Round 1": {
+    n: 1, loaded: true, data: decodeRound(ROUND_1_DICT, ROUND_1_DATA), promise: null,
+    decode: () => decodeRound(ROUND_1_DICT, ROUND_1_DATA),
+  },
+  "Round 2": {
+    n: 2, loaded: false, data: null, promise: null,
+    decode: () => decodeRound(ROUND_2_DICT, ROUND_2_DATA),
+  },
+  "Round 3": {
+    n: 3, loaded: false, data: null, promise: null,
+    decode: () => decodeRound(ROUND_3_DICT, ROUND_3_DATA),
+  },
+};
+
+let data = ROUND_META["Round 1"].data;
+let selectedRound = "Round 1";
+let activeRound = "Round 1";
 
 const filterState = {
   quota: "",
@@ -359,16 +390,52 @@ function buildFilters() {
   createInstituteAutocomplete(document.getElementById("filter-institute"));
 }
 
+function loadRound(round) {
+  const meta = ROUND_META[round];
+  if (meta.loaded) return Promise.resolve();
+  if (!meta.promise) {
+    meta.promise = new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.onload = resolve;
+      s.onerror = reject;
+      s.src = `./round-${meta.n}/data.compact.js`;
+      document.head.appendChild(s);
+    }).then(() => {
+      meta.data = meta.decode();
+      meta.loaded = true;
+    });
+  }
+  return meta.promise;
+}
+
+function renderRoundStatus(message) {
+  const body = document.getElementById("table-body");
+  body.innerHTML = `<tr><td colspan="8" class="empty-cell">${message}</td></tr>`;
+  document.getElementById("result-count").textContent = message;
+  document.getElementById("page-info").textContent = "";
+  document.getElementById("prev-btn").disabled = true;
+  document.getElementById("next-btn").disabled = true;
+}
+
 function switchRound(round) {
-  if (round === currentRound) return;
-  currentRound = round;
-  data = DATA_BY_ROUND[round];
-  for (const key of Object.keys(filterState)) filterState[key] = "";
-  page = 1;
-  sortKey = "rank";
-  sortDir = "asc";
-  buildFilters();
-  applyFilters();
+  selectedRound = round;
+  if (activeRound === round) return;
+  renderRoundStatus(`Loading ${round} data…`);
+  loadRound(round)
+    .then(() => {
+      if (selectedRound !== round) return;
+      activeRound = round;
+      data = ROUND_META[round].data;
+      for (const key of Object.keys(filterState)) filterState[key] = "";
+      page = 1;
+      sortKey = "rank";
+      sortDir = "asc";
+      buildFilters();
+      applyFilters();
+    })
+    .catch(() => {
+      if (selectedRound === round) renderRoundStatus(`Failed to load ${round} data.`);
+    });
 }
 
 function init() {
