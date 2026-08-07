@@ -8,6 +8,7 @@ const filterState = {
   course: "",
   allottedCategory: "",
   candidateCategory: "",
+  state: "",
   institute: "",
 };
 
@@ -28,12 +29,14 @@ const FILTER_FIELDS = [
   { key: "course", label: "Course" },
   { key: "allottedCategory", label: "Allotted Category" },
   { key: "candidateCategory", label: "Candidate Category" },
+  { key: "state", label: "State" },
 ];
 
 let sortKey = "rank";
 let sortDir = "asc";
 let page = 1;
 let filteredRows = data.slice();
+let institutePlaceholderUpdater = null;
 
 const fmt = (n) => n.toLocaleString("en-IN");
 
@@ -68,6 +71,7 @@ function createDropdown(container, { key, label }) {
   const search = root.querySelector(".dd-search");
   const optionsBox = root.querySelector(".dd-options");
   const labelEl = root.querySelector(".dd-label");
+  const notifyChange = () => window.dispatchEvent(new CustomEvent("filterschange"));
 
   function renderOptions(query = "") {
     optionsBox.innerHTML = "";
@@ -83,6 +87,7 @@ function createDropdown(container, { key, label }) {
       labelEl.classList.add("is-muted");
       close();
       renderOptions();
+      notifyChange();
     });
     optionsBox.appendChild(anyBtn);
 
@@ -100,6 +105,7 @@ function createDropdown(container, { key, label }) {
         labelEl.classList.remove("is-muted");
         close();
         renderOptions();
+        notifyChange();
       });
       optionsBox.appendChild(opt);
       shown++;
@@ -145,6 +151,9 @@ function createDropdown(container, { key, label }) {
 
 function createInstituteAutocomplete(container) {
   const institutes = uniqueSorted("institute");
+  const instState = new Map();
+  for (const row of data) if (!instState.has(row.institute)) instState.set(row.institute, row.state);
+  const DEFAULT_SUGGESTIONS = 10;
 
   const root = document.createElement("div");
   root.className = "autocomplete";
@@ -157,6 +166,13 @@ function createInstituteAutocomplete(container) {
   const input = root.querySelector("input");
   const clear = root.querySelector(".ac-clear");
   const list = root.querySelector(".ac-list");
+
+  function updatePlaceholder() {
+    const available = filterState.state
+      ? institutes.filter((inst) => instState.get(inst) === filterState.state).length
+      : institutes.length;
+    input.placeholder = `Search Allotted Institute ( ${available} available )`;
+  }
 
   function updateClear() {
     clear.classList.toggle("visible", filterState.institute !== "");
@@ -171,12 +187,35 @@ function createInstituteAutocomplete(container) {
       return;
     }
 
+    const base = filterState.state
+      ? institutes.filter((inst) => instState.get(inst) === filterState.state)
+      : institutes;
+
     if (!q) {
-      list.classList.remove("visible");
+      const suggestions = filterState.state ? base : base.slice(0, DEFAULT_SUGGESTIONS);
+      if (suggestions.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "ac-empty";
+        empty.textContent = "No institutes in this state";
+        list.appendChild(empty);
+      } else {
+        for (const inst of suggestions) {
+          const item = document.createElement("button");
+          item.type = "button";
+          item.className = "ac-item";
+          item.textContent = inst;
+          item.title = inst;
+          item.addEventListener("click", () => {
+            select(inst);
+          });
+          list.appendChild(item);
+        }
+      }
+      list.classList.add("visible");
       return;
     }
 
-    const matches = institutes.filter((inst) => inst.toLowerCase().includes(q)).slice(0, 50);
+    const matches = base.filter((inst) => inst.toLowerCase().includes(q)).slice(0, 50);
 
     if (matches.length === 0) {
       const empty = document.createElement("div");
@@ -227,7 +266,8 @@ function createInstituteAutocomplete(container) {
   });
 
   input.addEventListener("focus", () => {
-    if (input.value.trim()) renderMatches(input.value);
+    updatePlaceholder();
+    renderMatches(input.value);
   });
 
   input.addEventListener("keydown", (e) => {
@@ -252,6 +292,13 @@ function createInstituteAutocomplete(container) {
   wrap.appendChild(lbl);
   wrap.appendChild(root);
   container.appendChild(wrap);
+
+  if (institutePlaceholderUpdater) {
+    window.removeEventListener("filterschange", institutePlaceholderUpdater);
+  }
+  institutePlaceholderUpdater = updatePlaceholder;
+  window.addEventListener("filterschange", institutePlaceholderUpdater);
+  updatePlaceholder();
   updateClear();
 }
 
@@ -264,6 +311,7 @@ function applyFilters() {
     if (filterState.course && row.course !== filterState.course) return false;
     if (filterState.allottedCategory && row.allottedCategory !== filterState.allottedCategory) return false;
     if (filterState.candidateCategory && row.candidateCategory !== filterState.candidateCategory) return false;
+    if (filterState.state && row.state !== filterState.state) return false;
     if (filterState.institute && row.institute !== filterState.institute) return false;
     return true;
   });
@@ -337,6 +385,7 @@ function clearAll() {
     instInput.value = "";
     document.querySelector(".ac-clear").classList.remove("visible");
   }
+  window.dispatchEvent(new CustomEvent("filterschange"));
   applyFilters();
 }
 
@@ -347,6 +396,7 @@ function buildFilters() {
   document.getElementById("filter-course").innerHTML = "";
   document.getElementById("filter-allotted").innerHTML = "";
   document.getElementById("filter-candidate").innerHTML = "";
+  document.getElementById("filter-state").innerHTML = "";
   document.getElementById("filter-institute").innerHTML = "";
 
   for (const field of FILTER_FIELDS) {
@@ -355,6 +405,7 @@ function buildFilters() {
       course: "course",
       allottedCategory: "allotted",
       candidateCategory: "candidate",
+      state: "state",
     }[field.key]);
     createDropdown(container, field);
   }
