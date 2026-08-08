@@ -226,6 +226,41 @@ main {
   max-width: 420px;
 }
 
+.filter-control.filter-score {
+  min-width: 120px;
+  max-width: 140px;
+}
+
+.score-input label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.score-input input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  background: var(--surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.score-input input::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.score-input input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
 .filter-actions {
   display: flex;
   gap: 8px;

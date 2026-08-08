@@ -10,6 +10,8 @@ const filterState = {
   candidateCategory: "",
   state: "",
   institute: "",
+  minScore: "",
+  maxScore: "",
 };
 
 const COLUMN_META = {
@@ -302,10 +304,38 @@ function createInstituteAutocomplete(container) {
   updateClear();
 }
 
+/* ---------- Score inputs ---------- */
+
+function createScoreInput(container, { key, label }) {
+  const root = document.createElement("div");
+  root.className = "score-input";
+
+  const lbl = document.createElement("label");
+  lbl.textContent = label;
+
+  const input = document.createElement("input");
+  input.type = "number";
+  input.min = "0";
+  input.step = "1";
+  input.placeholder = "Any";
+  input.value = filterState[key];
+  input.addEventListener("input", () => {
+    filterState[key] = input.value.trim();
+  });
+
+  root.appendChild(lbl);
+  root.appendChild(input);
+  container.appendChild(root);
+}
+
 /* ---------- Filtering / sorting / pagination ---------- */
 
 function applyFilters() {
   page = 1;
+  const minScore = Number(filterState.minScore);
+  const maxScore = Number(filterState.maxScore);
+  const hasMin = filterState.minScore !== "" && Number.isFinite(minScore);
+  const hasMax = filterState.maxScore !== "" && Number.isFinite(maxScore);
   filteredRows = data.filter((row) => {
     if (filterState.quota && row.quota !== filterState.quota) return false;
     if (filterState.course && row.course !== filterState.course) return false;
@@ -313,6 +343,8 @@ function applyFilters() {
     if (filterState.candidateCategory && row.candidateCategory !== filterState.candidateCategory) return false;
     if (filterState.state && row.state !== filterState.state) return false;
     if (filterState.institute && row.institute !== filterState.institute) return false;
+    if (hasMin && Number(row.score) < minScore) return false;
+    if (hasMax && Number(row.score) > maxScore) return false;
     return true;
   });
   sortRows();
@@ -385,6 +417,9 @@ function clearAll() {
     instInput.value = "";
     document.querySelector(".ac-clear").classList.remove("visible");
   }
+  document.querySelectorAll(".score-input input").forEach((el) => {
+    el.value = "";
+  });
   window.dispatchEvent(new CustomEvent("filterschange"));
   applyFilters();
 }
@@ -397,6 +432,8 @@ function buildFilters() {
   document.getElementById("filter-allotted").innerHTML = "";
   document.getElementById("filter-candidate").innerHTML = "";
   document.getElementById("filter-state").innerHTML = "";
+  document.getElementById("filter-min-score").innerHTML = "";
+  document.getElementById("filter-max-score").innerHTML = "";
   document.getElementById("filter-institute").innerHTML = "";
 
   for (const field of FILTER_FIELDS) {
@@ -410,6 +447,8 @@ function buildFilters() {
     createDropdown(container, field);
   }
 
+  createScoreInput(document.getElementById("filter-min-score"), { key: "minScore", label: "Min Score" });
+  createScoreInput(document.getElementById("filter-max-score"), { key: "maxScore", label: "Max Score" });
   createInstituteAutocomplete(document.getElementById("filter-institute"));
 }
 
