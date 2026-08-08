@@ -5,6 +5,9 @@
 
 ---
 
+## Syllabus 
+<img src="./assets/neet-pg-btr-syllabus.jpeg" height="500px">
+
 ## Scope
 
 Subjects done **sequentially** (finish one, start the next), in **momentum order** — quick wins first, heaviest subject last:
