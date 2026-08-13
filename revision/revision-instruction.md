@@ -90,7 +90,7 @@ The coreBTR subject is divided into 4 major section based on the video duration 
 
 Above I have marked the subjects which I have completed with status as Done and those subjects which are remaining to study are marked with status Pending.
 
-My exam is on 30th August, so I need a revision plan/schedule for 9th aug - 29th aug.
+My exam is on 30th August, so I need a revision plan/schedule for 13th aug - 29th aug.
 I need help to prepare a schedule so that I can revise all the done subjects a **total of 2 times**.
 
 
@@ -129,7 +129,8 @@ Information about my self.
 
 - For the 2nd pass of revision, consider that I will use my notes 100% of the time. and if I feel something is not clear then only in that rare moment I will watch a chunk of the video.
 - You can consider that I will be watching only 10% of the video content out of 100% of the video content.
-- The definination of done in the 2nd pass revision is also the same as the 1st pass.
+- The definination of done in the 2nd pass revision is I go through the notes and attempted bookmark questions.
+- The bookmark question per subject will be the 50% of total questions of a subject. So the question load is 50%
 - For PYQ, consider I will take 1 minute to read + answer + read the explaination.
 
 

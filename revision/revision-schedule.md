@@ -1,10 +1,11 @@
-# NEET PG Revision Schedule — 10 Aug to 29 Aug 2026
+# NEET PG Revision Schedule — 13 Aug to 29 Aug 2026
 
 - **Exam date:** Sunday, 30 Aug 2026
-- **Goal:** 2 complete revision passes over all **20 done subjects**
-- **Daily commitment:** **13 study-hours/day (target)** · **12 hours/day (floor)**
+- **Window:** 17 days (Thu 13 Aug – Sat 29 Aug)
+- **Daily commitment:** **13 study-hours/day (target)** · **12 hours/day (floor)** · avg ≈ 13.5 h (pass-1 days run up to 14.5 h)
+- **Goal:** Pass 1 (full) for all **20 done subjects** + Pass 2 (notes + bookmarked PYQs) for the **11 highest-priority** subjects
 - **Not in scope:** the 7 pending subjects (CVS, Renal+Electrolytes, FMT, Dermatology, Ophthalmology, Psychiatry, PSM)
-- **9 Aug (Sun):** rest / prep day — organise notes, print PYQ sets, skim this schedule. No formal study.
+- **Aug 10–12 (Mon–Wed):** free/light days — rest, organise notes, print PYQ sets. Not part of this plan.
 
 ---
 
@@ -14,30 +15,45 @@
 |---|---|
 | Total video content (done subjects) | ≈ 79.3 hours |
 | Chapters | ≈ video duration ÷ 50 min → **96 chapters** total |
-| **Pass 1** (thorough) | Revision speed **2×** (1 h video → 2 h): notes + ~30% video re-watch |
-| Pass 1 PYQ speed | **1.5 min/question** (read + answer + read explanation) |
-| **Pass 2** (notes-based) | **100% notes**, ~10% video re-watch; notes speed ≈ **0.7×** |
-| Pass 2 PYQ speed | **1.0 min/question** |
+| **Pass 1** (thorough, ALL 20 subjects) | Revision speed **2×** (1 h video → 2 h): notes + ~30% video re-watch |
+| Pass 1 PYQ speed | **1.5 min/question** — do the **full** set; while doing them, **bookmark ~50% of the questions you consider important** |
+| **Pass 2** (notes-based, 11 subjects) | **100% notes**, ~10% video re-watch only if unclear; notes speed ≈ **0.7×** |
+| Pass 2 PYQ speed | **1.0 min/question** — do **only the bookmarked questions (≈50% of each subject's total)** |
 | PYQ count per subject | From the 2019–2025 analysis table (total column) |
 | General Medicine (167 Qs) | Split proportionally: Hematology 37 · Neurology 36 · Respiratory 28 · Endocrine 25 · Rheumatology 15 · GI+Hepatobiliary 14 · Immunology 12 |
-| Priority | Higher total PYQs = higher priority (see §5) |
+| Priority | Higher total PYQs = higher priority (see §6) |
 
 **Time budget**
 
 | Component | Hours |
 |---|---|
 | Pass 1 — revision (2× all 20 subjects) | 158.5 |
-| Pass 1 — PYQs (1,395 Qs × 1.5 min) | 34.9 |
-| Pass 2 — notes + 10% video | 55.5 |
-| Pass 2 — PYQs (1,395 Qs × 1.0 min) | 23.3 |
-| **Total** | **≈ 272 h** |
-| Capacity (20 days × 13–13.5 h) | ≈ 260–270 h |
-
-A full 2× of all 20 subjects needs ~13.5 h/day average. Pass 1 therefore runs slightly heavier (avg ~13.8 h/day) and Pass 2 lighter (avg ~13.1 h/day). If you hold at exactly 12 h/day, use the Downgrade Guide (§6) — the lowest-priority subjects are the first to compress.
+| Pass 1 — PYQs (1,395 Qs × 1.5 min, full set) | 34.9 |
+| Pass 2 — notes + 10% video (11 subjects) | 30.5 |
+| Pass 2 — bookmarked PYQs (~698 Qs × 1.0 min) | 6.0 |
+| **Total** | **≈ 230 h** |
+| Capacity (17 days × 13.5 h) | ≈ 229.5 h |
 
 ---
 
-## 2. Daily hour-by-hour template (≈13 h study)
+## 2. Which subjects get two passes vs one
+
+**Pass 2 (notes + bookmarked PYQs) — 11 subjects, ~36.5 h:**
+
+| Group | Subjects |
+|---|---|
+| General Medicine cluster | Immunology · GI+Hepatobiliary · Rheumatology · Endocrine · Respiratory · Neurology · Hematology |
+| High-yield | Microbiology · Pathology |
+| Top 2 | Surgery · OBG |
+
+**Pass 1 only (full revision + full PYQs, no second pass) — 9 subjects:**
+Anesthesia · Radiology · Orthopedics · ENT · Pediatrics · Physiology · Anatomy · Biochemistry · Pharmacology
+
+> These 9 subjects are locked at "one full pass + full PYQs". They are NOT downgraded further — the downgrade ladder (§7) only applies to the 11 Pass-2 subjects. This is the trade-off that makes the 17-day window fit at ~13.5 h/day.
+
+---
+
+## 3. Daily hour-by-hour template (≈13 h study)
 
 Same skeleton every day; only the subject/chapter content changes (see calendars below).
 
@@ -64,104 +80,102 @@ Same skeleton every day; only the subject/chapter content changes (see calendars
 - **Total study:** ~13 h. **Heavy days (14–14.5 h):** extend Block G and H by ~30–45 min and cut one 15-min break. **Low days (12 h floor):** drop Block F or shorten H.
 - **PYQs always go in low-energy slots:** C (post-lunch), E (late afternoon), H (late night).
 - **Rule of thumb:** never binge videos for more than 2 h straight — every 2 h block is followed by questions or a break.
+- **During Pass 1:** as you do each chapter's PYQs, mark the ~50% you'd want again — those become your Pass-2 question set.
 
 ---
 
-## 3. Pass 1 — Aug 10 to Aug 23 (14 days) · priority order
+## 4. Pass 1 — Aug 13 to Aug 26 (14 days) · all 20 subjects, priority order
 
-Revision rate 2×, PYQs at 1.5 min/q, done right after each chapter.
+Revision rate 2×, **full PYQs at 1.5 min/q**, done right after each chapter. Bookmark ~50% as you go.
 
 | Day | Date | Subject & chapters | Est. h | PYQs | End of day = DONE |
 |---|---|---|---|---|---|
-| D1 | Mon 10 Aug | **OBG** ch 1–7 | 14.4 | ~112 | OBG ch 1–7 revised + PYQs |
-| D2 | Tue 11 Aug | **OBG** ch 8–11 · **Surgery** ch 1–2 | 12.4 | ~94 | OBG finished (Pass 1) |
-| D3 | Wed 12 Aug | **Surgery** ch 3–9 | 14.6 | ~105 | Surgery ch 3–9 revised + PYQs |
-| D4 | Thu 13 Aug | **Surgery** ch 10–11 · **Hematology** ch 1–5 · **Neurology** ch 1 | 14.8 | ~74 | Surgery finished · Hematology done |
-| D5 | Fri 14 Aug | **Neurology** ch 2–4 · **Respiratory** ch 1–3 · **Endocrine** ch 1 | 14.4 | ~62 | Neurology + Respiratory done |
-| D6 | Sat 15 Aug | **Endocrine** ch 2–3 · **Rheumatology** ch 1–2 · **GI+Hepatobiliary** ch 1–2 · **Immunology** ch 1 | 13.1 | ~57 | Endocrine + Rheum + GI + Immuno done → **Systemic Medicine complete (Pass 1)** |
-| D7 | Sun 16 Aug | **Microbiology** ch 1–7 | 13.8 | ~112 | Micro ch 1–7 revised + PYQs |
-| D8 | Mon 17 Aug | **Microbiology** ch 8 · **Pathology** ch 1–2 · **Pharmacology** ch 1–2 | 14.2 | ~252 | Micro done · Pathology + Pharmacology done (heavy PYQ day) |
-| D9 | Tue 18 Aug | **Biochemistry** ch 1–6 · **Anatomy** ch 1 | 13.5 | ~97 | Biochem ch 1–6 revised + PYQs |
-| D10 | Wed 19 Aug | **Biochemistry** ch 7 · **Anatomy** ch 2–7 | 14.1 | ~92 | Biochemistry done · Anatomy done |
-| D11 | Thu 20 Aug | **Physiology** ch 1–2 · **Pediatrics** ch 1–5 | 14.3 | ~134 | Physiology done · Pediatrics ch 1–5 |
-| D12 | Fri 21 Aug | **Pediatrics** ch 6 · **ENT** ch 1–6 | 12.9 | ~72 | Pediatrics done · ENT done |
-| D13 | Sat 22 Aug | **Orthopedics** ch 1–6 · **Radiology** ch 1–2 | 14.6 | ~74 | Orthopedics done · Radiology ch 1–2 |
-| D14 | Sun 23 Aug | **Radiology** ch 3–5 · **Anesthesia** ch 1–3 | 12.3 | ~63 | Radiology done · Anesthesia done → **Pass 1 COMPLETE (all 20)** |
+| D1 | Thu 13 Aug | **OBG** ch 1–7 | 14.4 | ~112 | OBG ch 1–7 revised + PYQs |
+| D2 | Fri 14 Aug | **OBG** ch 8–11 · **Surgery** ch 1–2 | 12.4 | ~94 | OBG finished (Pass 1) |
+| D3 | Sat 15 Aug | **Surgery** ch 3–9 | 14.6 | ~105 | Surgery ch 3–9 revised + PYQs |
+| D4 | Sun 16 Aug | **Surgery** ch 10–11 · **Hematology** ch 1–5 · **Neurology** ch 1 | 14.8 | ~74 | Surgery finished · Hematology done |
+| D5 | Mon 17 Aug | **Neurology** ch 2–4 · **Respiratory** ch 1–3 · **Endocrine** ch 1 | 14.4 | ~62 | Neurology + Respiratory done |
+| D6 | Tue 18 Aug | **Endocrine** ch 2–3 · **Rheumatology** ch 1–2 · **GI+Hepatobiliary** ch 1–2 · **Immunology** ch 1 | 13.1 | ~57 | Endocrine + Rheum + GI + Immuno done → **Systemic Medicine complete (Pass 1)** |
+| D7 | Wed 19 Aug | **Microbiology** ch 1–7 | 13.8 | ~112 | Micro ch 1–7 revised + PYQs |
+| D8 | Thu 20 Aug | **Microbiology** ch 8 · **Pathology** ch 1–2 · **Pharmacology** ch 1–2 | 14.2 | ~252 | Micro done · Pathology + Pharmacology done (heavy PYQ day) |
+| D9 | Fri 21 Aug | **Biochemistry** ch 1–6 · **Anatomy** ch 1 | 13.5 | ~97 | Biochem ch 1–6 revised + PYQs |
+| D10 | Sat 22 Aug | **Biochemistry** ch 7 · **Anatomy** ch 2–7 | 14.1 | ~92 | Biochemistry done · Anatomy done |
+| D11 | Sun 23 Aug | **Physiology** ch 1–2 · **Pediatrics** ch 1–5 | 14.3 | ~134 | Physiology done · Pediatrics ch 1–5 |
+| D12 | Mon 24 Aug | **Pediatrics** ch 6 · **ENT** ch 1–6 | 12.9 | ~72 | Pediatrics done · ENT done |
+| D13 | Tue 25 Aug | **Orthopedics** ch 1–6 · **Radiology** ch 1–2 | 14.6 | ~74 | Orthopedics done · Radiology ch 1–2 |
+| D14 | Wed 26 Aug | **Radiology** ch 3–5 · **Anesthesia** ch 1–3 | 12.3 | ~63 | Radiology + Anesthesia done → **Pass 1 COMPLETE (all 20)** |
 
 ---
 
-## 4. Pass 2 — Aug 24 to Aug 29 (6 days) · reverse priority
+## 5. Pass 2 — Aug 27 to Aug 29 (3 days) · 11 subjects, notes + bookmarked PYQs (1 min/q)
 
-Notes 100% + ~10% video re-watch, PYQs at 1.0 min/q. Done in **reverse priority** so OBG (highest yield) finishes freshest on 29 Aug.
+Done in **reverse priority** so Surgery → OBG finish freshest on 29 Aug. Notes 100%, video only if unclear.
 
-| Day | Date | Subject & chapters | Est. h | PYQs | End of day = DONE |
+| Day | Date | Subject & chapters | Est. h | Bookmarked PYQs | End of day = DONE |
 |---|---|---|---|---|---|
-| D15 | Mon 24 Aug | **Anesthesia** ch 1–3 · **Radiology** ch 1–5 · **Orthopedics** ch 1–6 · **ENT** ch 1–4 | 13.3 | ~151 | Anesthesia + Radiology + Ortho + ENT (Pass 2) |
-| D16 | Tue 25 Aug | **ENT** ch 5–6 · **Pediatrics** ch 1–6 · **Physiology** ch 1–2 · **Anatomy** ch 1–5 | 12.3 | ~229 | Pediatrics + Physiology + Anatomy (Pass 2) |
-| D17 | Wed 26 Aug | **Anatomy** ch 6–7 · **Biochemistry** ch 1–7 · **Pharmacology** ch 1–2 · **Pathology** ch 1–2 | 13.3 | ~357 | Biochemistry + Pharmacology + Pathology (Pass 2) |
-| D18 | Thu 27 Aug | **Microbiology** ch 1–8 · **Immunology** ch 1 · **GI+Hepatobiliary** ch 1–2 · **Rheumatology** ch 1–2 · **Endocrine** ch 1–3 | 12.3 | ~194 | Microbiology + systemic smalls (Pass 2) |
-| D19 | Fri 28 Aug | **Respiratory** ch 1–3 · **Neurology** ch 1–4 · **Hematology** ch 1–5 · **Surgery** ch 1–6 | 14.0 | ~191 | Respiratory + Neurology + Hematology (Pass 2) |
-| D20 | Sat 29 Aug | **Surgery** ch 7–11 · **OBG** ch 1–11 | 13.5 | ~253 | **Surgery + OBG finished → BOTH PASSES COMPLETE** |
+| D15 | Thu 27 Aug | **Immunology** · **GI+Hepatobiliary** · **Rheumatology** · **Endocrine** · **Respiratory** · **Neurology** · **Hematology** (all chapters, notes) | 13.3 | ~85 | General Medicine cluster done (Pass 2) |
+| D16 | Fri 28 Aug | **Microbiology** ch 1–8 · **Pathology** ch 1–2 · **Surgery** ch 1–5 | 11.0 | ~133 | Microbiology + Pathology done (Pass 2) · Surgery half done |
+| D17 | Sat 29 Aug | **Surgery** ch 6–11 · **OBG** ch 1–11 | 12.1 | ~102 | **Surgery + OBG done → BOTH PASSES COMPLETE** |
 
 ---
 
-## 5. Chapter-wise PYQ counts (for planning each chapter)
+## 6. PYQ counts & bookmarks (per subject)
 
-Count = subject total ÷ chapters (estimated). Total PYQs across both passes ≈ 1,395 per pass.
+Count = subject total ÷ chapters. **Bookmark target = 50% of the total** per subject, picked during Pass 1.
 
-| Subject | Total Qs | Chapters | Qs/chapter |
-|---|---|---|---|
-| OBG | 178 | 11 | ~16 |
-| Surgery | 163 | 11 | ~15 |
-| Microbiology | 128 | 8 | ~16 |
-| Pathology | 123 | 2 | ~62 |
-| Pharmacology | 111 | 2 | ~56 |
-| Biochemistry | 97 | 7 | ~14 |
-| Anatomy | 88 | 7 | ~13 |
-| Physiology | 73 | 2 | ~37 |
-| Pediatrics | 71 | 6 | ~12 |
-| ENT | 62 | 6 | ~10 |
-| Orthopedics | 52 | 6 | ~9 |
-| Radiology | 48 | 5 | ~10 |
-| Hematology | 37 | 5 | ~7 |
-| Neurology | 36 | 4 | ~9 |
-| Respiratory | 28 | 3 | ~9 |
-| Endocrine | 25 | 3 | ~8 |
-| Rheumatology | 15 | 2 | ~8 |
-| GI+Hepatobiliary | 14 | 2 | ~7 |
-| Immunology | 12 | 1 | ~12 |
-| Anesthesia | 34 | 3 | ~11 |
+| Subject | Total Qs | Chapters | Qs/chapter | Bookmark (~50%) | In Pass 2? |
+|---|---|---|---|---|---|
+| OBG | 178 | 11 | ~16 | 89 | ✅ |
+| Surgery | 163 | 11 | ~15 | 82 | ✅ |
+| Microbiology | 128 | 8 | ~16 | 64 | ✅ |
+| Pathology | 123 | 2 | ~62 | 62 | ✅ |
+| Pharmacology | 111 | 2 | ~56 | 56 | ❌ |
+| Biochemistry | 97 | 7 | ~14 | 49 | ❌ |
+| Anatomy | 88 | 7 | ~13 | 44 | ❌ |
+| Physiology | 73 | 2 | ~37 | 37 | ❌ |
+| Pediatrics | 71 | 6 | ~12 | 36 | ❌ |
+| ENT | 62 | 6 | ~10 | 31 | ❌ |
+| Orthopedics | 52 | 6 | ~9 | 26 | ❌ |
+| Radiology | 48 | 5 | ~10 | 24 | ❌ |
+| Hematology | 37 | 5 | ~7 | 19 | ✅ |
+| Neurology | 36 | 4 | ~9 | 18 | ✅ |
+| Respiratory | 28 | 3 | ~9 | 14 | ✅ |
+| Endocrine | 25 | 3 | ~8 | 13 | ✅ |
+| Rheumatology | 15 | 2 | ~8 | 8 | ✅ |
+| GI+Hepatobiliary | 14 | 2 | ~7 | 7 | ✅ |
+| Immunology | 12 | 1 | ~12 | 6 | ✅ |
+| Anesthesia | 34 | 3 | ~11 | 17 | ❌ |
 
-Time check per chapter: **Pass 1** ≈ Qs × 1.5 min · **Pass 2** ≈ Qs × 1.0 min.
+Time check: **Pass 1** full Qs × 1.5 min · **Pass 2** bookmarked Qs × 1.0 min.
 
 **Priority order (highest → lowest)** — OBG → General Medicine (167) → Surgery → Microbiology → Pathology → Pharmacology → Biochemistry → Anatomy → Physiology → Pediatrics → ENT → Orthopedics → Radiology → Anesthesia.
 
 ---
 
-## 6. Backlog & Downgrade Guide
+## 7. Backlog & Downgrade Guide
 
 **Trigger rules — check every night at the 23:00 overflow window / day review:**
 
 | If you are behind by… | Do this |
 |---|---|
 | ≤ 1 h | Finish the shortfall in Block H tonight; carry anything left into **tomorrow's Block A** (highest energy slot). **No downgrade.** |
-| 1 – 3 h | Carry into Block A **+ downgrade the lowest-priority subject to Tier 1** (below). |
-| 3 – 12 h | Carry into Block A **+ downgrade the lowest-priority subject to Tier 3** (drop its Pass 2). |
-| ≥ 1 full day lost | Drop Pass 2 for the **2 lowest-priority** subjects (or 1 subject at Tier 3 + the next at Tier 2). |
+| 1 – 3 h | Carry into Block A **+ downgrade the lowest-priority Pass-2 subject to Tier 2** (below). |
+| 3 – 12 h | Carry into Block A **+ downgrade the lowest-priority Pass-2 subject to Tier 3** (drop its Pass 2). |
+| ≥ 1 full day lost | Downgrade the **2 lowest-priority Pass-2** subjects to Tier 3. |
 
-**Downgrade tiers — apply to Pass 2 only. Pass 1 always stays full for every subject.**
+**Downgrade tiers — apply to Pass 2 subjects only.** The 9 Pass-1-only subjects are already at their minimum and never change.
 
-- **Tier 0 — Full:** notes + video re-watch (30% Pass 1 / 10% Pass 2) + all chapter PYQs.
-- **Tier 1 — Notes-only:** Pass-2 video re-watch = 0 (notes 100% + full PYQs). Frees ~5.7 h total across all subjects.
-- **Tier 2 — Notes-skim:** quick notes pass + PYQs only on the highest-yield chapters (skip low-yield ones). Frees ~half that subject's Pass-2 time.
-- **Tier 3 — Drop Pass 2:** subject keeps full Pass 1 + its PYQs; Pass 2 skipped. Frees that subject's whole Pass-2 block (2.5 – 9.3 h each).
+- **Tier 0 — Full:** notes + rare video re-watch + all bookmarked PYQs.
+- **Tier 1 — Notes-only:** skip even the rare video re-watch.
+- **Tier 2 — Notes-skim:** quick notes pass + bookmarked PYQs only on the highest-yield chapters.
+- **Tier 3 — Drop Pass 2:** subject keeps only its full Pass 1 + full PYQs.
 
-**Downgrade order — always the lowest-priority subject first:**
+**Downgrade order — always the lowest-priority Pass-2 subject first:**
 
-Anesthesia (34) → Radiology (48) → Orthopedics (52) → ENT (62) → Pediatrics (71) → Physiology (73) → Anatomy (88) → Biochemistry (97) → Pharmacology (111) → Pathology (123) → Microbiology (128) → Surgery (163) → General Medicine (167 — inside the cluster, downgrade in this order: Immunology → GI+Hepatobiliary → Rheumatology → Endocrine → Respiratory → Neurology → Hematology) → **OBG (178, never downgraded).**
+General Medicine cluster (inside: Immunology → GI+Hepatobiliary → Rheumatology → Endocrine → Respiratory → Neurology → Hematology) → Microbiology → Pathology → Surgery → **OBG (never downgraded).**
 
 **Golden rules**
-1. Never skip a scheduled subject — downgrade it (Tier 1 → 2 → 3) instead.
+1. The 9 Pass-1-only subjects (Anesthesia, Radiology, Ortho, ENT, Pediatrics, Physiology, Anatomy, Biochemistry, Pharmacology) get exactly one full pass + full PYQs — never expand them into Pass 2.
 2. Backlog moves into **tomorrow's Block A** before any new content starts.
 3. When low on energy/mood, take the 12 h floor day — but protect the PYQ slots (C, E, H); drop revision blocks first.
-4. On 29 Aug, if still behind, cut Pass-2 video re-watch to zero for all remaining subjects before dropping any subject's PYQs.
+4. On 29 Aug, if still behind, cut Pass-2 video re-watch and notes-skim the General Medicine smalls before touching Surgery/OBG.
