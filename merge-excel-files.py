@@ -8,7 +8,7 @@ from openpyxl import Workbook
 # Configuration
 # ===========================================
 
-INPUT_FOLDER = str(input("Enter folder name which contains the excel files, eg : all-excel"))
+INPUT_FOLDER = "output" # str(input("Enter folder name which contains the excel files, eg : all-excel"))
 OUTPUT_FILE = "merged.xlsx"
 
 # ===========================================
