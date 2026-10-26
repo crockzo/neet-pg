@@ -6,10 +6,10 @@ from pypdf import PdfReader, PdfWriter
 # Configuration
 # ==================================================
 
-INPUT_PDF = str(input("Enter the pdf name with .pdf at the end. Eg : document.pdf : "))
+INPUT_PDF = "result.pdf" #str(input("Enter the pdf name with .pdf at the end. Eg : document.pdf : "))
 OUTPUT_PDF = "output.pdf"
 
-PAGES_TO_DELETE = int(input("Enter number of pages you want to delete from the start : "))
+PAGES_TO_DELETE = 1 #int(input("Enter number of pages you want to delete from the start : "))
 
 # ==================================================
 
