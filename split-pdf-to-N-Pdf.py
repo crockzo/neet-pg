@@ -1,10 +1,10 @@
 from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 
-INPUT_PDF = str(input("Enter pdf file name with .pdf at the end. eg : document.pdf"))
+INPUT_PDF = "output.pdf" # str(input("Enter pdf file name with .pdf at the end. eg : document.pdf"))
 OUTPUT_FOLDER = "split_parts"
 
-PAGES_PER_FILE = int(input("Enter number of pages you want per pdf. eg : 100"))  # Change this
+PAGES_PER_FILE = 100 # int(input("Enter number of pages you want per pdf. eg : 100"))  # Change this
 
 
 def main():
